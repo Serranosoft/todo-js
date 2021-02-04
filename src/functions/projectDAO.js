@@ -1,7 +1,7 @@
 import Project from '../classes/projectConstructor'
-import {createProject, createInitialProjects, removeProject} from '../helpers/helpers';
+import {createProject} from '../helpers/helpers';
 
-const projectArray = [];
+//const projectArray = [];
 
 const addProject = ((title, storage) => {
 
@@ -17,14 +17,4 @@ const deleteProject = ((project, storage) => {
 })
 
 
-
-/*const addInitialProjects = ((title) => {
-
-    let p = new Project(title);
-
-    createInitialProjects(p);
-
-});*/
-
-
-export { addProject, /*addInitialProjects*/ deleteProject }
+export { addProject, deleteProject }

@@ -105,14 +105,11 @@ function renderTasks(project) {
 
         // task listener's
         taskItem.addEventListener("click", () => {
-            // mostrar información de la tarea
             showTaskInfo(project, project.tasks[i]);
 
         })
 
         taskStatus.addEventListener("click", () => {
-            console.log("CAMBIAR ESTADO DE LA TAREA");
-            // cambiar el estado de la tarea
             changeTaskStatus(project.tasks[i], taskItem);
             updateProject(project);
 
@@ -240,7 +237,6 @@ function showTaskInfo(project, task) {
         taskInfoActionContainer.appendChild(taskInfoSave);
 
         taskInfoSave.addEventListener("click", (e) => {
-            console.log("GUARDA INFO");
             taskInfoDateFinishLabel.innerHTML = daysLeft(task.date_creation, taskInfoDateFinish.value);
             saveTaskInfo(project, task, taskInfoDescr.value, taskInfoDateFinish.value);
 
@@ -267,7 +263,6 @@ function saveTaskInfo(project, task, description, date_finish) {
 
     task.description = description;
     task.date_finish = date_finish;
-    console.log(date_finish);
     updateProject(project);
 
 }

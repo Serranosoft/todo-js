@@ -1,0 +1,76 @@
+/* MODAL ADD PROJECT */
+.modal {
+    width: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-close {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: end;
+}  
+
+#project-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+}
+
+#project-form label {
+    color: black;
+    font-size: 28px;
+}
+
+#project-form input[type="text"] {
+    margin: 16px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#project-form input[type="submit"] {
+    padding: 8px 50px;
+    font-size: 16px;
+    background:transparent;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#project-form input[type="submit"]:hover {
+    background: #eca400;
+}
+
+/* OVERLAY */
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
